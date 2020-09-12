@@ -235,7 +235,7 @@ def SetCamera(address):
 
 if __name__ == '__main__':
 
-    prototxtPath = os.path.sep.join(["face_detector", "deploy.prototxt"])
+    prototxtPath = os.path.sep.join(["face_detector", "maskdetector/DetectCode/deploy.prototxt"])
     weightsPath = os.path.sep.join(["face_detector","res10_300x300_ssd_iter_140000.caffemodel"])
     faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
     maskNet = load_model("mask_detector.model")
