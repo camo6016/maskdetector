@@ -232,12 +232,12 @@ def SetCamera(address):
 
     return "Successfully added Camera at " + address
 
-
 if __name__ == '__main__':
 
-    prototxtPath = os.path.sep.join(["face_detector", "maskdetector/DetectCode/deploy.prototxt"])
-    weightsPath = os.path.sep.join(["face_detector","res10_300x300_ssd_iter_140000.caffemodel"])
+    CodePath = "/maskdetector/DetectCode/"
+    prototxtPath = os.path.sep.join([CodePath, "face_detector", "deploy.prototxt"])
+    weightsPath  = os.path.sep.join([CodePath, "face_detector", "res10_300x300_ssd_iter_140000.caffemodel"])
     faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
-    maskNet = load_model("mask_detector.model")
+    maskNet = load_model(os.path.sep.join([CodePath, "mask_detector.model"]))
 
     app.run_server(debug=True, port='8080', host='0.0.0.0')
