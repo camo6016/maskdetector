@@ -18,9 +18,9 @@
   <body style="background-color:#333; color:white">
 
         <nav class="navbar navbar-default">
-          <h4 class="my-0 mr-md-auto font-weight-normal">Mask Detection Demo Application</h4>
+          <h4 class="my-0 mr-md-auto font-weight-normal"></h4>
           <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-white" href="/">Home</a>
+            <a class="p-2 text-white" href="/"></a>
           </nav>
         </nav>
 
@@ -28,40 +28,85 @@
         <div class="container">
             <h1 class="cover-heading">Containerised Mask Detection Demo Application</h1>
             <p>
-                This website provides a centralised user veiw of a contaised mask detection application developed and deployed to support the Telstra and Ericsson Hyperscaler Orchestration Project. Though this website you will be able to veiw the processed video from containers deployed into a Hyperscaler using Ericsson Orchestration tools.
+                This website provides a centralised user veiw of a contaised mask detection application. Though this website you will be able to veiw the processed video from containers deployed into a Hyperscaler.
             </p>
         </div>
 
+        <div class="container">
+            <h2>Manage Video Services</h2>
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Camera IP Address</th>
+                  <th scope="col">Submit Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+
+
+
+
 
 			<div class="container">
-  <div class="row">
-    <div class="col">			
-	  <h4 class="cover-heading">Camera Feed One</h4>
-	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/raw_video_feed" class="img-fluid">
-	</div>
-    <div class="col">
-	  <h4 class="cover-heading">Camera Feed Two</h4>
-	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/detect_video_feed" class="img-fluid">
-	</div>
-	<div class="w-100"></div>
-    <div class="col">
-	  <h4 class="cover-heading">Camera Feed Three</h4>
-	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/raw_video_feed" class="img-fluid">
-	</div>
-    <div class="col">
-	  <h4 class="cover-heading">Camera Feed Four</h4>
-	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/detect_video_feed" class="img-fluid">
-	</div>
-	<div class="w-100"></div>
-    <div class="col">
-	  <h4 class="cover-heading">Camera Feed Five</h4>
-	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/raw_video_feed" class="img-fluid">
-	</div>
-    <div class="col">
-	  <h4 class="cover-heading">Camera Feed Six</h4>
-	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/detect_video_feed" class="img-fluid">
-	</div>
-  </div>
+			<h2 class="cover-heading">Veiw Video Services</h2>
+             <div class="row">
+               <div class="col">			
+            	  <h4 class="cover-heading">Camera Feed One Raw</h4>
+            	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/raw_video_feed" class="img-fluid">
+            	</div>
+               <div class="col">
+            	  <h4 class="cover-heading">Camera Feed One Processed</h4>
+            	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/detect_video_feed" class="img-fluid">
+            	</div>
+            	<div class="w-100"></div>
+               <div class="col">
+            	  <h4 class="cover-heading">Camera Feed Two Raw</h4>
+            	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/raw_video_feed" class="img-fluid">
+            	</div>
+               <div class="col">
+            	  <h4 class="cover-heading">Camera Feed Two Processed</h4>
+            	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/detect_video_feed" class="img-fluid">
+            	</div>
+            	<div class="w-100"></div>
+               <div class="col">
+            	  <h4 class="cover-heading">Camera Feed Three Raw</h4>
+            	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/raw_video_feed" class="img-fluid">
+            	</div>
+               <div class="col">
+            	  <h4 class="cover-heading">Camera Feed Three Processed</h4>
+            	  <img src="http://ad6aa6e19ee3.cc-home.cameronengineer.mylocal:8080/detect_video_feed" class="img-fluid">
+            	</div>
+             </div>
 </div>
     
 
