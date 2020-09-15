@@ -13,8 +13,8 @@ The container image is hosted on [Docker Hub](https://hub.docker.com/r/camo6016/
 ```bash
 docker run -d -p 8080:8080 camo6016/maskdetector:1.3
 ```
-2. Access the url at *http://<hostipaddress>:8080/*. A single page with "Webcam Test" should apear.
+2. Access the url at http://*hostipaddress*:8080/. A single page with "Webcam Test" should apear.
   
 3. Start "RTSP Camera Server" App on and an Android Device. Start the Camera in the app and ensure that the IP address is accessable from the container.
 
-4. Direct the container to access the video stream of the Android device by sending *http://<hostipaddress>:8080/setcamera/<IPAddressofAndroidCamera>*
+4. Direct the container to access the video stream of the Android device by sending http://*hostipaddress*:8080/setcamera/*IPAddressofAndroidCamera*
