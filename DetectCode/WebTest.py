@@ -26,7 +26,7 @@ import time
 import cv2
 import copy
 import logging
-os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp|min_port;5000|max_port;5100"
+os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp|min_port;5000|max_port;5020"
 
 from flask import Flask, Response
 import cv2
