@@ -26,7 +26,7 @@ import time
 import cv2
 import copy
 import logging
-os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp|min_port;5000|max_port;5020"
+os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;tcp"
 
 from flask import Flask, Response
 import cv2
@@ -121,7 +121,7 @@ def VideoCamera():
 
             print("Trying to reconnect to a camera at" + Address)
 
-            capture = cv2.VideoCapture("rtsp://" + Address + ":5554/camera", cv2.CAP_FFMPEG)
+            capture = cv2.VideoCapture("rtsp://" + Address + ":5554/camy", cv2.CAP_FFMPEG)
             capture.set(cv2.CAP_PROP_BUFFERSIZE, 2)
             time.sleep(2)
             if capture.isOpened():
@@ -226,7 +226,7 @@ def SetCamera(address):
 
 
     for i in range(0,5):
-        capture = cv2.VideoCapture("rtsp://" + address + ":5554/camera", cv2.CAP_FFMPEG)
+        capture = cv2.VideoCapture("rtsp://" + address + ":5554/cam", cv2.CAP_FFMPEG)
         capture.set(cv2.CAP_PROP_BUFFERSIZE, 2)
         time.sleep(2)
         if capture.isOpened():
@@ -249,11 +249,11 @@ def SetCamera(address):
         GenRawJPEGThread.daemon = True
         GenRawJPEGThread.start()
 
-    if GenDetectJPEGThread == None:
-        print("Start Detect Thread")
-        GenDetectJPEGThread = Thread(target=GenerateDetectWebFrame, args=())
-        GenDetectJPEGThread.daemon = True
-        GenDetectJPEGThread.start()
+    #if GenDetectJPEGThread == None:
+    #    print("Start Detect Thread")
+    #    GenDetectJPEGThread = Thread(target=GenerateDetectWebFrame, args=())
+    #    GenDetectJPEGThread.daemon = True
+    #    GenDetectJPEGThread.start()
 
     return "Successfully added Camera at " + address
 
