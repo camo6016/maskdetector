@@ -249,11 +249,11 @@ def SetCamera(address):
         GenRawJPEGThread.daemon = True
         GenRawJPEGThread.start()
 
-    #if GenDetectJPEGThread == None:
-    #    print("Start Detect Thread")
-    #    GenDetectJPEGThread = Thread(target=GenerateDetectWebFrame, args=())
-    #    GenDetectJPEGThread.daemon = True
-    #    GenDetectJPEGThread.start()
+    if GenDetectJPEGThread == None:
+        print("Start Detect Thread")
+        GenDetectJPEGThread = Thread(target=GenerateDetectWebFrame, args=())
+        GenDetectJPEGThread.daemon = True
+        GenDetectJPEGThread.start()
 
     return "Successfully added Camera at " + address
 
